@@ -5,7 +5,16 @@ This project implements a fuzzy logic system to monitor water quality based on p
 ## Project Structure
 
 - `main.ipynb`: Jupyter notebook containing the main implementation of the fuzzy logic system.
-- `data/monitoring_logs_2024-12-11.csv`: CSV file containing the water quality monitoring data.
+- `fuzzy.py`: Fuzzy utils for implementating into `main.ipynb`
+- `evaluation.py`: Evaluation library using confussion matrix method.
+- `save_image.py`: Utils for show and save memberships plots.
+    
+- `data/*`: Folder that containing the water quality monitoring data.
+- `data/raw/*`: Folder that containing fuzzy result data.
+- `data/result/*`: Folder that containing cleaned fuzzy result that already used for evaluation.
+- `images/*`: Folder for exported membership functions plot.
+
+- `requirements.txt`: Required library.
 - `README.md`: Project documentation.
 
 ## Requirements
@@ -15,18 +24,19 @@ This project implements a fuzzy logic system to monitor water quality based on p
 - Pandas
 - Matplotlib
 - NumPy
+- IPython
 
 ## Installation
 
 1. Clone the repository:
     ```sh
-    git clone https://github.com/masmuss/fuzzy-water-quality-monitoring.git
-    cd fuzzy-water-quality-monitoring
+    git clone https://github.com/masmuss/sugeno-fuzzy-simulator.git
+    cd sugeno-fuzzy-simulator
     ```
 
 2. Install the required packages:
     ```sh
-    pip install pandas matplotlib numpy
+    pip install -r requirements.txt
     ```
 
 ## Usage
