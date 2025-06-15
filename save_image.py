@@ -13,7 +13,7 @@ def plot_and_save_membership_functions(
 
     # pH plot
     plt.figure(figsize=(width, height))
-    plt.plot(x_ph, ph_acidic, label='Acid', color='blue')
+    plt.plot(x_ph, ph_acidic, label='Acidic', color='blue')
     plt.plot(x_ph, ph_neutral, label='Optimal', color='green')
     plt.plot(x_ph, ph_alkali, label='Alkaline', color='red')
     plt.xlabel('pH')
@@ -27,7 +27,7 @@ def plot_and_save_membership_functions(
 
     # TDS plot
     plt.figure(figsize=(width, height))
-    plt.plot(x_tds, tds_lowest, label='Lower', color='blue')
+    plt.plot(x_tds, tds_lowest, label='Very Low', color='blue')
     plt.plot(x_tds, tds_low, label='Low', color='orange')
     plt.plot(x_tds, tds_medium, label='Optimal', color='green')
     plt.plot(x_tds, tds_high, label='High', color='red')

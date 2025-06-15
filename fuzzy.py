@@ -251,3 +251,20 @@ def defuzzification(rules):
     if denominator == 0:
         return 0
     return round(numerator / denominator, 2)
+
+
+def get_z_result(row):
+    """
+    Calculates the defuzzified water quality result for a given data row.
+
+    Args:
+        row (dict): A dictionary containing the keys 'tds', 'ph', and 'water_temp' with their respective values.
+
+    Returns:
+        float: The defuzzified crisp value representing the water quality classification.
+    """
+    tds_mf = tds_membership(row['tds'])
+    ph_mf = ph_membership(row['ph'])
+    temp_mf = temp_membership(row['water_temp'])
+    rules = fuzzy_rules(x1=tds_mf, x2=ph_mf, x3=temp_mf)
+    return defuzzification(rules)
